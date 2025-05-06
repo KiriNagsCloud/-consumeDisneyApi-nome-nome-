@@ -29,6 +29,7 @@ const AxiosPage = () => {
         <>
             <h1>Axios page client side</h1>
             <Suspense fallback={<div>Loading...</div>}>
+                <div className="flex flex-wrap gap-6 justify-center">
                 {Array.isArray(data) && data.map((item, index) => (
                     <div key={index} className="my-6">
                         <h2>{item.name}</h2>
@@ -52,6 +53,7 @@ const AxiosPage = () => {
                         )}
                     </div>
                 ))}
+                </div>
             </Suspense>
         </>
     )
